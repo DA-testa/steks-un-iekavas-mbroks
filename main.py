@@ -41,8 +41,8 @@ def find_mismatch(text):
 
 def main():
     mode = input()
-    if mode=="I":
-        text=input()
+    if mode(0)=="I":
+        text=mode[1:len(mode)]
     elif mode=="F":
         text=input()
 
