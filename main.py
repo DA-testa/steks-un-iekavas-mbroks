@@ -36,8 +36,8 @@ def find_mismatch(text):
                 else:
                     return i+1
     if len(opening_brackets_stack)!=0:
-        return i+1
-            
+        return opening_brackets_stack.pop().position + 1
+
     return 0
 
 def main():
