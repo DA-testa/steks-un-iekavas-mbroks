@@ -31,12 +31,15 @@ def find_mismatch(text):
                 return i+1
             else:
                 brac = opening_brackets_stack.pop()
+                print(are_matching(Bracket(next,i),brac))
                 if(are_matching(Bracket(next,i),brac)):
-                    break    
+                    pass
+                else:
+                    return i+1
 
     if len(opening_brackets_stack)!=0:
         return i+1
-            #pass
+        
     return 0
 
 def main():
