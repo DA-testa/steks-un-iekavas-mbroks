@@ -37,7 +37,8 @@ def find_mismatch(text):
                     return i+1
 
     if len(opening_brackets_stack)>0:
-        return opening_brackets_stack.pop().position+1
+        last = opening_brackets_stack.pop()
+        return last.position+1
 
     return 0
 
@@ -45,8 +46,11 @@ def main():
     mode = input()
     if mode[0]=="I":
         text=input()
+        
     elif mode[0]=="F":
-        text=input()
+        inp=input("Please input path to file")
+        f = open(inp, "r")
+        text=f
 
     mismatch = find_mismatch(text)
     # Printing answer, write your code here
