@@ -32,11 +32,12 @@ def find_mismatch(text):
                 brac = opening_brackets_stack.pop()
      
                 if are_matching(brac.char,Bracket(next,i).char):
-                    break
+                    continue
                 else:
                     return i+1
-    if len(opening_brackets_stack)!=0:
-        return opening_brackets_stack.pop().position + 1
+
+    if len(opening_brackets_stack)>0:
+        return opening_brackets_stack.pop().position+1
 
     return 0
 
