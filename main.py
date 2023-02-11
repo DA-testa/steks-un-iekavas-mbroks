@@ -35,14 +35,16 @@ def find_mismatch(text):
                     break
                 else:
                     return i+1
-        
+    if len(opening_brackets_stack)!=0:
+        return i+1
+            
     return 0
 
 def main():
     mode = input()
     if mode[0]=="I":
         text=input()
-    elif mode=="F":
+    elif mode[0]=="F":
         text=input()
 
     mismatch = find_mismatch(text)
