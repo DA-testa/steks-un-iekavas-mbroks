@@ -31,7 +31,7 @@ def find_mismatch(text):
                 return i+1
             else:
                 brac = opening_brackets_stack.pop()
-                print(are_matching(Bracket(next,i),brac))
+                #print(are_matching(Bracket(next,i),brac))
                 if(are_matching(Bracket(next,i),brac)):
                     pass
                 else:
