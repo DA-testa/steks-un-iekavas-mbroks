@@ -27,18 +27,14 @@ def find_mismatch(text):
             #print(u)
             if len(opening_brackets_stack)==0 and i==0:
                 return i+1
-            if len(opening_brackets_stack)==0  and i!=0:
-                return i+1
+
             else:
                 brac = opening_brackets_stack.pop()
-                #print(are_matching(Bracket(next,i),brac))
-                if(are_matching(Bracket(next,i),brac)):
-                    pass
+     
+                if are_matching(brac.char,Bracket(next,i).char):
+                    break
                 else:
                     return i+1
-
-    if len(opening_brackets_stack)!=0:
-        return i+1
         
     return 0
 
