@@ -50,7 +50,7 @@ def main():
     elif mode[0]=="F":
         inp=input("Please input path to file")
         f = open(inp, "r")
-        text=f
+        text=f.read()
 
     mismatch = find_mismatch(text)
     # Printing answer, write your code here
